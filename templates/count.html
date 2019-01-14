@@ -1,0 +1,20 @@
+<h1>There are {{wordcount}} words in your text!</h1>
+<a href="index.html"></a>
+
+<form action="{% url 'index' %}">
+	<input type="submit" value="Count again!"/>
+</form>
+
+<form action="{% url 'about' %}">
+	<input type="submit" value="Go to the about page"/>
+</form>
+
+<h1>Your text:</h1>
+{{ fulltext }}
+<br></br>
+<h1>Sorted text:</h1>
+{% for word, counter in sorted_words%}
+{{word}} - {{counter}}
+<br/>
+{%endfor%}
+

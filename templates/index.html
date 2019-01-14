@@ -1,0 +1,11 @@
+<h1>THIS IS THE INDEX PAGE</h1>
+
+<form action="{% url 'about' %}">
+	<input type="submit" value="Go to the about page"/>
+</form>
+
+<form action="{% url 'count' %}">
+	<textarea cols="40" rows="5" name="fulltext"></textarea>
+	<br />
+	<input type="submit" value="Count!"/>
+</form>
